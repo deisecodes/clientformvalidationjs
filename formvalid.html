@@ -22,5 +22,18 @@
       <input id="choose" name="i_like">
       <button>Submit</button>
     </form>
+
+    <script>
+      const email = document.getElemendById("mail");
+
+      email.addEventListener("input", (event) => {
+        if (email.validity.typeMismatch) {
+          email.setCustomValidity("I am expecting an email adress!");
+        } else {
+          email.setCustomValidity("");
+        }
+      });
+          
+    </script>
   </body>
 </html>
