@@ -1,39 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Favorite Fruit start</title>
-    <style>
-      input:invalid {
-        border: 2px dashed red;
-      }
-
-      input:valid {
-        border: 2px solid black;
-      }
-    </style>
-  </head>
-
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>form  validations with js</title>
+</head>
+<body>
+    <h1>FOOD HABITS RESEARCH</h1>
+    <p class="pbold">We are a group of university students researching about people's average food habits. We need your help
+        to fill these questions as honest as possible! This is a very important research that will lead to a very
+        interesting case study about average food habits. We're counting on you! Thanks in advance.
+    </p>
     <form>
-      <label for="choose">Você prefere laranja ou banana?</label>
-      <input id="choose" name="i_like">
-      <button>Submit</button>
+        <label for="favorite">What is your favorite food?</label><br>
+        <input id="food" name="food" required><br>
+
+        <label for="favorite">How often do you eat fruits?</label><br>
+        <input id="food" name="food" required><br>
+
+        <label for="favorite">How often do you eat vegetables?</label><br>
+        <input id="food" name="food" required><br>
+
+        <label for="favorite">How dou you often like your food prepared? Fried? Well cooked? Grilled?<br>
+            Answer any input you'd like to add</label><br>
+        <input id="food" name="food" required><br><br>
+
+        <button>Submit Answers</button>   
     </form>
 
-    <script>
-      const email = document.getElemendById("mail");
+    <h2>CONTACT</h2>
+        <p>We may want volunteers to participate in this research. If you'd like to join our volunteers team, please 
+            give us your contact information so we can reach out. 
+        </p>
 
-      email.addEventListener("input", (event) => {
-        if (email.validity.typeMismatch) {
-          email.setCustomValidity("I am expecting an email adress!");
-        } else {
-          email.setCustomValidity("");
-        }
-      });
-          
-    </script>
-  </body>
+    <form>
+        <label for="emailadress">Main e-mail Adress:</label><br>
+        <input id="mail" name="mail" type="email" required><br>
+        <span id="emailError"></span>
+
+        <label for="phonenumber">Phone Number:</label><br>
+        <input id="phone" name="phone" type="tel" required minlength="5" maxlength="10" pattern="[0-9]{3}(?:[-. ]?[0-9]{3})?[ -.]?[0-9]{4}" 
+        placeholder="###-###-#### "><br><br>
+
+        <label for="commentbox">Leave a Comment:</label><br>
+        <textarea id="comment" name="comment" placeholder="leave a comment if you'd like to have a word on something else or 
+        add more information about your current volunteer position" minlength="15" maxlength="200"></textarea><br><br>
+
+        <button>Submit</button>
+    </form>
+
+    <h2>ALREADY A VOLUNTEER?</h2>
+    <p>Are you already one of our volunteers? Sign in to get in touch with your next steps.</p>
+    <form>
+        <label for="username">Username:</label><br>
+        <em>the username should consist of a single letter, followed by a dot, followed by three or more letters or numbers. 
+            all letters should be lowercase.</em><br><br>
+        <input id="user" name="user" type="text" min="5" max="20" pattern="[a-z]\.[a-z0-9] {3,}" required><br><br>
+
+        <button>Log In</button>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
 </html>
