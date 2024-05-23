@@ -1,0 +1,17 @@
+
+
+input {
+    border: 2px solid black;
+}
+
+.pbold {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+em {
+    font-weight: lighter;
+    color:gray;
+    
+
+}
