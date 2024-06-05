@@ -1,2 +1,2 @@
 # jsformvalidation
-a client side form validation using javascrip
+a client side form validation using javascript
